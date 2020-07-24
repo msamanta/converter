@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <title>Image Compress</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .wrapper {
+            background: #e7b91b;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1542351567-cd7b06dc08d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjI0MX0&auto=format&fit=crop&w=749&q=80);
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h2 {
+            color: rgb(117, 215, 228);
+            font-family: cursive;
+            font-size: 65px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            line-height: 1;
+            text-align: center;
+            padding-bottom: 25px;
+        }
+
+
+        .custom-file-input:hover {
+
+
+            padding-right: 25px;
+        }
+
+
+        .custom-file-input {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #e47c06;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 15px;
+            width: 160px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 6px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <center><img width="200" height="200" src="<%= url %>" /></center>
+        <center>
+            <h2>Compress your Image</h2>
+        </center>
+        <form action="/compress/uploads/<%=name%>/<%=ext%>" method="POST">
+            <input class="custom-file-input" type="Submit" value="compress" />
+
+        </form>
+    </div>
+</body>
+
+</html>
