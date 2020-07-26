@@ -1,0 +1,35 @@
+<html>
+<center>
+  <h1>Welcome to my pdf Page</h1>
+  <center>
+    <style>
+      header {
+        
+       
+        top: 25%;
+        left: 25%;
+        transform: translate(-25%, -25%);
+        
+      }
+
+      
+      .class2{
+        border:2px solid black;
+        width:600px;
+        padding:5px;
+        margin:6px;
+       height:300px;
+       
+      }
+    </style>
+
+    <body>
+      <header>
+        <div class="class1">
+          <% images.forEach(image => { %>
+          <img class ="class2" src="<%- image%>" /><% }) %>
+        </div>
+      </header>
+    </body>
+
+</html>
